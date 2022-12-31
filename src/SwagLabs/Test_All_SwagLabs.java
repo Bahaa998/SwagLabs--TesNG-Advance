@@ -73,6 +73,12 @@ public class Test_All_SwagLabs {
 			newListPRice.add(Price_Double);
 
 		}
+		for (int j = 0; j < newListPRice.size(); j++) {
+			boolean checkFirstItem = newListPRice.get(0) < newListPRice.get(newListPRice.size() - 1);
+
+			Assert.assertEquals(checkFirstItem, true);
+
+		}
 
 //		System.out.println("Lowest price : " + newListPRice.get(0));
 //		System.out.println("Highest price : " + newListPRice.get(newListPRice.size() - 1));
@@ -172,7 +178,7 @@ public class Test_All_SwagLabs {
 		driver.findElement(By.id("first-name")).sendKeys("Bahaa" + Keys.TAB + "Algemzawe" + Keys.TAB + "11902");
 		driver.findElement(By.id("continue")).click();
 		
-		js.executeScript("window.scrollBy(0,820)");
+		js.executeScript("window.scrollBy(0,1000)");
 
 		List<WebElement> checkout = driver.findElements(By.className("inventory_item_price"));
 
