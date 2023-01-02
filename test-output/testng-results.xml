@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-31T16:03:56 GMT+02:00" name="Default suite" finished-at="2022-12-31T16:04:18 GMT+02:00" duration-ms="21633">
+  <suite started-at="2023-01-02T02:18:53 GMT+02:00" name="Default suite" finished-at="2023-01-02T02:19:11 GMT+02:00" duration-ms="18054">
     <groups>
     </groups>
-    <test started-at="2022-12-31T16:03:56 GMT+02:00" name="Default test" finished-at="2022-12-31T16:04:18 GMT+02:00" duration-ms="21633">
+    <test started-at="2023-01-02T02:18:53 GMT+02:00" name="Default test" finished-at="2023-01-02T02:19:11 GMT+02:00" duration-ms="18054">
       <class name="SwagLabs.Test_All_SwagLabs">
-        <test-method is-config="true" signature="LoginBeforeTest()[pri:0, instance:SwagLabs.Test_All_SwagLabs@6356695f]" started-at="2022-12-31T16:03:56 GMT+02:00" name="LoginBeforeTest" finished-at="2022-12-31T16:04:05 GMT+02:00" duration-ms="9078" status="PASS">
+        <test-method is-config="true" signature="LoginBeforeTest()[pri:0, instance:SwagLabs.Test_All_SwagLabs@79924b]" started-at="2023-01-02T02:18:53 GMT+02:00" name="LoginBeforeTest" finished-at="2023-01-02T02:18:57 GMT+02:00" duration-ms="4372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginBeforeTest -->
-        <test-method signature="Check_Title()[pri:1, instance:SwagLabs.Test_All_SwagLabs@6356695f]" started-at="2022-12-31T16:04:05 GMT+02:00" name="Check_Title" finished-at="2022-12-31T16:04:05 GMT+02:00" duration-ms="43" status="PASS">
+        <test-method signature="Check_Title()[pri:1, instance:SwagLabs.Test_All_SwagLabs@79924b]" started-at="2023-01-02T02:18:57 GMT+02:00" name="Check_Title" finished-at="2023-01-02T02:18:57 GMT+02:00" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Check_Title -->
-        <test-method signature="sorting_Low_To_High()[pri:2, instance:SwagLabs.Test_All_SwagLabs@6356695f]" started-at="2022-12-31T16:04:05 GMT+02:00" name="sorting_Low_To_High" finished-at="2022-12-31T16:04:06 GMT+02:00" duration-ms="674" status="PASS">
+        <test-method signature="sorting_Low_To_High()[pri:2, instance:SwagLabs.Test_All_SwagLabs@79924b]" started-at="2023-01-02T02:18:57 GMT+02:00" name="sorting_Low_To_High" finished-at="2023-01-02T02:18:58 GMT+02:00" duration-ms="247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sorting_Low_To_High -->
-        <test-method signature="sorting_High_To_Low()[pri:3, instance:SwagLabs.Test_All_SwagLabs@6356695f]" started-at="2022-12-31T16:04:06 GMT+02:00" name="sorting_High_To_Low" finished-at="2022-12-31T16:04:07 GMT+02:00" duration-ms="879" status="PASS">
+        <test-method signature="sorting_High_To_Low()[pri:3, instance:SwagLabs.Test_All_SwagLabs@79924b]" started-at="2023-01-02T02:18:58 GMT+02:00" name="sorting_High_To_Low" finished-at="2023-01-02T02:19:00 GMT+02:00" duration-ms="1974" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sorting_High_To_Low -->
-        <test-method signature="Check_Cart()[pri:4, instance:SwagLabs.Test_All_SwagLabs@6356695f]" started-at="2022-12-31T16:04:07 GMT+02:00" name="Check_Cart" finished-at="2022-12-31T16:04:08 GMT+02:00" duration-ms="714" status="PASS">
+        <test-method signature="Check_Cart()[pri:4, instance:SwagLabs.Test_All_SwagLabs@79924b]" started-at="2023-01-02T02:19:00 GMT+02:00" name="Check_Cart" finished-at="2023-01-02T02:19:01 GMT+02:00" duration-ms="1054" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Check_Cart -->
-        <test-method signature="Check_Total_Prace_in_The_Cart()[pri:5, instance:SwagLabs.Test_All_SwagLabs@6356695f]" started-at="2022-12-31T16:04:08 GMT+02:00" name="Check_Total_Prace_in_The_Cart" finished-at="2022-12-31T16:04:10 GMT+02:00" duration-ms="2697" status="PASS">
+        <test-method signature="Check_Total_Prace_in_The_Cart()[pri:5, instance:SwagLabs.Test_All_SwagLabs@79924b]" started-at="2023-01-02T02:19:01 GMT+02:00" name="Check_Total_Prace_in_The_Cart" finished-at="2023-01-02T02:19:04 GMT+02:00" duration-ms="2752" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Check_Total_Prace_in_The_Cart -->
-        <test-method is-config="true" signature="afterMyTest()[pri:0, instance:SwagLabs.Test_All_SwagLabs@6356695f]" started-at="2022-12-31T16:04:10 GMT+02:00" name="afterMyTest" finished-at="2022-12-31T16:04:18 GMT+02:00" duration-ms="7463" status="PASS">
+        <test-method is-config="true" signature="afterMyTest()[pri:0, instance:SwagLabs.Test_All_SwagLabs@79924b]" started-at="2023-01-02T02:19:04 GMT+02:00" name="afterMyTest" finished-at="2023-01-02T02:19:11 GMT+02:00" duration-ms="7582" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMyTest -->

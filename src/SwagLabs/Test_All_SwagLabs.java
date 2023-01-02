@@ -17,15 +17,16 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Test_All_SwagLabs {
 	public WebDriver driver;
+	SoftAssert softAssertProccess = new SoftAssert();
 
 	@BeforeTest
 	public void LoginBeforeTest() {
@@ -44,7 +45,8 @@ public class Test_All_SwagLabs {
 	public void Check_Title() {
 		String actualTitle = driver.getTitle();
 		String expectedTitle = "Swag Labs";
-		Assert.assertEquals(actualTitle, expectedTitle);
+		softAssertProccess.assertEquals(actualTitle, expectedTitle , "Check the Title : ");
+		softAssertProccess.assertAll();
 	}
 
 // ******************************* sorting Low To High ***********************************
@@ -76,8 +78,8 @@ public class Test_All_SwagLabs {
 		for (int j = 0; j < newListPRice.size(); j++) {
 			boolean checkFirstItem = newListPRice.get(0) < newListPRice.get(newListPRice.size() - 1);
 
-			Assert.assertEquals(checkFirstItem, true);
-
+			softAssertProccess.assertEquals(checkFirstItem, true , "Check sorting Low To High : ");
+			softAssertProccess.assertAll();
 		}
 
 //		System.out.println("Lowest price : " + newListPRice.get(0));
@@ -113,7 +115,8 @@ public class Test_All_SwagLabs {
 		for (int j = 0; j < newListPRice.size(); j++) {
 			boolean checkFirstItem = newListPRice.get(0) > newListPRice.get(newListPRice.size() - 1);
 
-			Assert.assertEquals(checkFirstItem, true);
+			softAssertProccess.assertEquals(checkFirstItem, true  ,"Check sorting High To Low : ");
+			softAssertProccess.assertAll();
 
 		}
 //		System.out.println("Lowest price : " + newListPRice.get(newListPRice.size() - 1));
@@ -134,27 +137,28 @@ public class Test_All_SwagLabs {
 			addToCart.get(i).click();
 //			Thread.sleep(1000);
 		}
+		
+		List<WebElement> item_in_cart = driver.findElements(By.className("btn_secondary"));
+//		System.out.println("item_in_cart : " + item_in_cart.size());
+		
 
 //		String actualSize = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).getText();
-//
 //		int actualSize_Updated = Integer.parseInt(actualSize);
-//		
 //		int expectedSize = addToCart.size(); // 6
 //		Assert.assertEquals(actualSize_Updated, expectedSize);
-//		
 
 		// Go to Cart
 		driver.findElement(By.className("shopping_cart_link")).click();
-//		Thread.sleep(1000);
 
 		// Size of list in Cart
 		List<WebElement> myCart = driver.findElements(By.className("cart_item"));
 //		System.out.println("Size of list items in cart : " + myCart.size());
 
 		// Check actual size of list
-		int actualSize = addToCart.size(); // 6
-		int expectedSize = myCart.size(); // 6
-		Assert.assertEquals(actualSize, expectedSize);
+		int actualSize = myCart.size(); // 6
+		int expectedSize = item_in_cart.size(); // 6
+		softAssertProccess.assertEquals(actualSize, expectedSize, "Check actual size : ");
+		softAssertProccess.assertAll();
 	}
 	
 
@@ -199,10 +203,8 @@ public class Test_All_SwagLabs {
 
 			newListPrice.add(Price_Double);
 			counts += Price_Double;
-//			System.out.println(newListPrice.get(i) + newListPrice.get(i));
-
 		}
-//		System.out.println("Total Count Before Taxt" + counts);
+//		System.out.println("Total Count Before Taxt : " + counts);
 
 		String Tax = driver.findElement(By.className("summary_tax_label")).getText();
 
@@ -237,7 +239,8 @@ public class Test_All_SwagLabs {
 		FileUtils.copyFile(srcFile, Destination);
 		
 
-		Assert.assertEquals(Actual_Total_Fix, Expected_Total_prace);
+		softAssertProccess.assertEquals(Actual_Total_Fix, Expected_Total_prace , "Check The Total Prace : ");
+		softAssertProccess.assertAll();
 	}
 
 
